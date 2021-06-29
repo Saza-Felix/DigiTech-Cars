@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title> DigiTech</title>
+    <link rel="icon" href="./img/car.png" type="image/icon type">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/main-page.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="" crossorigin="anonymous" />
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.css">
+
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Full-width input fields */
+        /* .input {
+            width: 35%;
+            padding: 10px 15px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid rgb(187, 182, 182);
+            box-sizing: border-box;
+        } */
+        
+        .inputpass {
+            mask-type: password;
+            color: rgb(25, 163, 231);
+            text-emphasis-style: password;
+        }
+        
+        .input:hover {
+            color: rgb(25, 163, 231);
+            font-size: 2rem;
+        }
+        /* Set a style for all buttons */
+        
+        .buttonadmin {
+            padding-top: 30px;
+            padding-left: 80%;
+        }
+        
+        .buttonadmin:hover {
+            color: red;
+            font-size: 2rem;
+        }
+        /* Extra styles for the cancel button */
+        
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+        /* Center the image and position the close button */
+        
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+        
+        img.avatar {
+            width: 20%;
+            border-radius: 50%;
+        }
+        
+        .containeradmin {
+            padding-left: 5%;
+            padding-bottom: 5%;
+        }
+        
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+        /* Modal Content/Box */
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 40%;
+            /* Could be more or less, depending on screen size */
+        }
+        /* The Close Button (x) */
+        
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+        /* Add Zoom Animation */
+        
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+        
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+        
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+        /* Change styles for span and cancel button on extra small screens */
+        
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="top-nav">
+        <div>
+            <a href="about us.html"><i class="fas fa-users"></i>About</a>
+            <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact us</a>
+            <a href="./LoginPage.html"><i class="fa fa-fw fa-user"></i>Log In</a>
+            <a href="./dealersign.html"><i class="fas fa-hands-helping"></i>Dealer</a>
+
+        </div>
+
+    </div>
+
+    <div class="top-nav-logo">
+        <div>
+            <a href="index.html"><strong>HOME</strong></a>
+            <a href="#"><strong>AVAILABLE</strong></a>
+            <a href="#"><strong>HIRE</strong></a>
+            <label class="badge" for="button" style="background-color: red;">NEW</label>
+            <a href="#"><button><i>REQUEST A CAR</i></button></a>
+            <a href="#"><i><botton style="background-color: red;color: white;padding: 10px;border-radius: 25px;font-size: 1.25em;">BUY A CAR</i></botton>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="middle-image">
+        <img src="./img/background.jpg" alt="DigiTech Cars" width="100%" ;height="Auto" ;max-width="100%">
+
+        <!-- </div>
+
+
+    <div class="featured-listings" style="visibility: visible;">
+        <h3>Featured Vehicles</h3>
+        <section>
+            <ul class="featured-listings__ul slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
+                <div aria-live="polite" class="slick-list draggable">
+                    <div class="slick-track" style="opacity: 1; width: 6150px; left: -2050px;" role="listbox">
+                        <li data-id="2322614" data-href="https://www.cheki.co.ke/vehicle/qk0w5ex?featured=true" data-advertiser="9835" data-user="178671" class="slick-slide slick-cloned" data-slick-index="-5" aria-hidden="true" tabindex="-1" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qk0w5ex?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1196017965_inventory419464592_1622794803.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Proton Saga Premium AT</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">1km</div>
+                                <div class="featured-listings__bullet">2019</div>
+                                <div class="featured-listings__price"><span>KSh</span>1,575,000</div>
+                                <div class="image-count">11 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2321806" data-href="https://www.cheki.co.ke/vehicle/qwwdez0?featured=true" data-advertiser="9068" data-user="136564" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qwwdez0?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/4556737_inventory47591562_1622563906.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">BMW X1</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">95,000km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>2,250,000</div>
+                                <div class="image-count">12 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2328266" data-href="https://www.cheki.co.ke/vehicle/land-rover-range-rover-vogue-65g8zn?featured=true" data-user="191746" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/land-rover-range-rover-vogue-65g8zn?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1108168305_inventory1381005596_1624213075.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Land Rover Range Rover Vogue</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">113,000km</div>
+                                <div class="featured-listings__bullet">2013</div>
+                                <div class="featured-listings__price"><span>KSh</span>8,800,000</div>
+                                <div class="image-count">4 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2326305" data-href="https://www.cheki.co.ke/vehicle/qnw42wx?featured=true" data-advertiser="7653" data-user="186009" class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qnw42wx?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1767193312_inventory95321495_1622104668.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Mitsubishi Outlander 2.4</div>
+                                <div class="featured-listings__location">Mombasa</div>
+                                <div class="featured-listings__bullet">36,270km</div>
+                                <div class="featured-listings__bullet">2015</div>
+                                <div class="featured-listings__price"><span>KSh</span>2,800,000</div>
+                                <div class="image-count">8 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2326463" data-href="https://www.cheki.co.ke/vehicle/q5gmvkr?featured=true" data-advertiser="2082" data-user="6866" class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/q5gmvkr?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/699889892_inventory291658985_1623747069.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Mercedes-Benz E200</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">108,000km</div>
+                                <div class="featured-listings__bullet">2006</div>
+                                <div class="featured-listings__price"><span>KSh</span>1,450,000</div>
+                                <div class="image-count">12 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2320587" data-href="https://www.cheki.co.ke/vehicle/nissan-note-zxn7q8?featured=true" data-user="186747" class="slick-slide" data-slick-index="0" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide20"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/nissan-note-zxn7q8?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1783538706_inventory1380136890_1623415007.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Toyota Vitz 1.3 U</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">1km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>950,000</div>
+                                <div class="image-count">14 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2327827" data-href="https://www.cheki.co.ke/vehicle/subaru-legacy-nw4kn0?featured=true" data-advertiser="8880" class="slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide21"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/subaru-legacy-nw4kn0?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1_inventory2327827_1624028852.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Subaru Legacy</div>
+                                <div class="featured-listings__location">Mombasa</div>
+                                <div class="featured-listings__bullet">93,000km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>1,950,000</div>
+                                <div class="image-count">5 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2327760" data-href="https://www.cheki.co.ke/vehicle/qp8x580?featured=true" data-advertiser="7792" data-user="67967" class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide22"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qp8x580?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1223951802_inventory1341852080_1624018166.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Toyota Vitz</div>
+                                <div class="featured-listings__location">Mombasa</div>
+                                <div class="featured-listings__bullet">72,561km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>760,000</div>
+                                <div class="image-count">9 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2320580" data-href="https://www.cheki.co.ke/vehicle/qk04wvw?featured=true" data-advertiser="9046" data-user="135703" class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide23"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qk04wvw?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/142694714_inventory319547571_1622199080.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Mitsubishi Pajero</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">141,557km</div>
+                                <div class="featured-listings__bullet">2012</div>
+                                <div class="featured-listings__price"><span>KSh</span>2,350,000</div>
+                                <div class="image-count">10 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2323029" data-href="https://www.cheki.co.ke/vehicle/nissan-sylphy-q6m7xz?featured=true" data-user="188471" class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide24"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/nissan-sylphy-q6m7xz?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1062661319_inventory659663571_1622907620.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Nissan Sylphy</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">125,335km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>998,000</div>
+                                <div class="image-count">15 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2310519" data-href="https://www.cheki.co.ke/vehicle/q5gj702?featured=true" data-advertiser="1755" data-user="807" class="slick-slide slick-current slick-active" data-slick-index="5" aria-hidden="false" tabindex="-1"
+                            role="option" aria-describedby="slick-slide25" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/q5gj702?featured=true" tabindex="0"></a><img class="" src="https://vimg.cheki.co.ke/m/554382773_inventory1288128333_1610548938.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Nissan X-Trail</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">79,000km</div>
+                                <div class="featured-listings__bullet">2013</div>
+                                <div class="featured-listings__price"><span>KSh</span>1,700,000</div>
+                                <div class="image-count">8 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2314060" data-href="https://www.cheki.co.ke/vehicle/qp8znwq?featured=true" data-advertiser="9621" data-user="170541" class="slick-slide slick-active" data-slick-index="6" aria-hidden="false" tabindex="-1" role="option"
+                            aria-describedby="slick-slide26" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qp8znwq?featured=true" tabindex="0"></a><img class="" src="https://vimg.cheki.co.ke/m/1984296261_inventory2064105545_1623847029.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Nissan Note</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">122,000km</div>
+                                <div class="featured-listings__bullet">2015</div>
+                                <div class="featured-listings__price"><span>KSh</span>875,000</div>
+                                <div class="image-count">12 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2319240" data-href="https://www.cheki.co.ke/vehicle/toyota-vanguard-dnvp8r?featured=true" class="slick-slide slick-active" data-slick-index="7" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide27"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/toyota-vanguard-dnvp8r?featured=true" tabindex="0"></a><img class="" src="https://vimg.cheki.co.ke/m/1_inventory2319240_1621927837.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Toyota Vanguard</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">Automatic</div>
+                                <div class="featured-listings__bullet">2013</div>
+                                <div class="featured-listings__price"><span>KSh</span>2,450,000</div>
+                                <div class="image-count">13 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2315578" data-href="https://www.cheki.co.ke/vehicle/qmnxd09?featured=true" data-advertiser="7326" data-user="41784" class="slick-slide slick-active" data-slick-index="8" aria-hidden="false" tabindex="-1" role="option"
+                            aria-describedby="slick-slide28" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qmnxd09?featured=true" tabindex="0"></a><img class="" src="https://vimg.cheki.co.ke/m/1812463025_inventory1466332048_1623643798.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">BMW X3 2.0D Exclusive</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">84,000km</div>
+                                <div class="featured-listings__bullet">2013</div>
+                                <div class="featured-listings__price"><span>KSh</span>3,250,000</div>
+                                <div class="image-count">11 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2268578" data-href="https://www.cheki.co.ke/vehicle/toyota-hilux-30-d-4d-double-cab-mn75pg?featured=true" data-user="158304" class="slick-slide slick-active" data-slick-index="9" aria-hidden="false" tabindex="-1" role="option"
+                            aria-describedby="slick-slide29" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/toyota-hilux-30-d-4d-double-cab-mn75pg?featured=true" tabindex="0"></a><img class="" src="https://vimg.cheki.co.ke/m/1_inventory2268578_1605206155.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Toyota Hilux 3.0 D-4D Double Cab</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">95,000km</div>
+                                <div class="featured-listings__bullet">2013</div>
+                                <div class="featured-listings__price"><span>KSh</span>3,250,000</div>
+                                <div class="image-count">6 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2328641" data-href="https://www.cheki.co.ke/vehicle/q5gmnpr?featured=true" data-advertiser="7792" data-user="67967" class="slick-slide" data-slick-index="10" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide210"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/q5gmnpr?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1019402168_inventory1618220229_1624285597.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Toyota Ractis</div>
+                                <div class="featured-listings__location">Mombasa</div>
+                                <div class="featured-listings__bullet">105,000km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>950,000</div>
+                                <div class="image-count">9 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2322260" data-href="https://www.cheki.co.ke/vehicle/qp8xwd0?featured=true" data-advertiser="7326" data-user="41784" class="slick-slide" data-slick-index="11" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide211"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qp8xwd0?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1231901798_inventory705551868_1622705881.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Audi A6 Allroad Quattro 3.0 TFSi</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">67,000km</div>
+                                <div class="featured-listings__bullet">2013</div>
+                                <div class="featured-listings__price"><span>KSh</span>4,695,000</div>
+                                <div class="image-count">8 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2297402" data-href="https://www.cheki.co.ke/vehicle/qvz6jrk?featured=true" data-advertiser="1947" data-user="77520" class="slick-slide" data-slick-index="12" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide212"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qvz6jrk?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1687708956_inventory647817080_1613722712.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Toyota HiAce KDH222</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">1,478,755km</div>
+                                <div class="featured-listings__bullet">2012</div>
+                                <div class="featured-listings__price"><span>KSh</span>1,790,000</div>
+                                <div class="image-count">7 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2318415" data-href="https://www.cheki.co.ke/vehicle/qjz80jw?featured=true" data-advertiser="8003" data-user="99480" class="slick-slide" data-slick-index="13" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide213"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qjz80jw?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1443582236_inventory1670054040_1621675256.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Toyota Land Cruiser Prado TX-L</div>
+                                <div class="featured-listings__location">Mombasa</div>
+                                <div class="featured-listings__bullet">65,000km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>5,950,000</div>
+                                <div class="image-count">10 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2318505" data-href="https://www.cheki.co.ke/vehicle/qnwmq7k?featured=true" data-advertiser="9839" data-user="182927" class="slick-slide" data-slick-index="14" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide214"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qnwmq7k?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/643839794_inventory552674198_1621700844.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Lexus LX 570</div>
+                                <div class="featured-listings__location">Mombasa</div>
+                                <div class="featured-listings__bullet">19,701km</div>
+                                <div class="featured-listings__bullet">2016</div>
+                                <div class="featured-listings__price"><span>KSh</span>18,000,000</div>
+                                <div class="image-count">13 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2322614" data-href="https://www.cheki.co.ke/vehicle/qk0w5ex?featured=true" data-advertiser="9835" data-user="178671" class="slick-slide" data-slick-index="15" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide215"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qk0w5ex?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1196017965_inventory419464592_1622794803.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Proton Saga Premium AT</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">1km</div>
+                                <div class="featured-listings__bullet">2019</div>
+                                <div class="featured-listings__price"><span>KSh</span>1,575,000</div>
+                                <div class="image-count">11 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2321806" data-href="https://www.cheki.co.ke/vehicle/qwwdez0?featured=true" data-advertiser="9068" data-user="136564" class="slick-slide" data-slick-index="16" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide216"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qwwdez0?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/4556737_inventory47591562_1622563906.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">BMW X1</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">95,000km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>2,250,000</div>
+                                <div class="image-count">12 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2328266" data-href="https://www.cheki.co.ke/vehicle/land-rover-range-rover-vogue-65g8zn?featured=true" data-user="191746" class="slick-slide" data-slick-index="17" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide217"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/land-rover-range-rover-vogue-65g8zn?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1108168305_inventory1381005596_1624213075.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Land Rover Range Rover Vogue</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">113,000km</div>
+                                <div class="featured-listings__bullet">2013</div>
+                                <div class="featured-listings__price"><span>KSh</span>8,800,000</div>
+                                <div class="image-count">4 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2326305" data-href="https://www.cheki.co.ke/vehicle/qnw42wx?featured=true" data-advertiser="7653" data-user="186009" class="slick-slide" data-slick-index="18" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide218"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qnw42wx?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1767193312_inventory95321495_1622104668.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Mitsubishi Outlander 2.4</div>
+                                <div class="featured-listings__location">Mombasa</div>
+                                <div class="featured-listings__bullet">36,270km</div>
+                                <div class="featured-listings__bullet">2015</div>
+                                <div class="featured-listings__price"><span>KSh</span>2,800,000</div>
+                                <div class="image-count">8 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2326463" data-href="https://www.cheki.co.ke/vehicle/q5gmvkr?featured=true" data-advertiser="2082" data-user="6866" class="slick-slide" data-slick-index="19" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide219"
+                            style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/q5gmvkr?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/699889892_inventory291658985_1623747069.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Mercedes-Benz E200</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">108,000km</div>
+                                <div class="featured-listings__bullet">2006</div>
+                                <div class="featured-listings__price"><span>KSh</span>1,450,000</div>
+                                <div class="image-count">12 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2320587" data-href="https://www.cheki.co.ke/vehicle/nissan-note-zxn7q8?featured=true" data-user="186747" class="slick-slide slick-cloned" data-slick-index="20" aria-hidden="true" tabindex="-1" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/nissan-note-zxn7q8?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1783538706_inventory1380136890_1623415007.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Toyota Vitz 1.3 U</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">1km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>950,000</div>
+                                <div class="image-count">14 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2327827" data-href="https://www.cheki.co.ke/vehicle/subaru-legacy-nw4kn0?featured=true" data-advertiser="8880" class="slick-slide slick-cloned" data-slick-index="21" aria-hidden="true" tabindex="-1" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/subaru-legacy-nw4kn0?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1_inventory2327827_1624028852.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Subaru Legacy</div>
+                                <div class="featured-listings__location">Mombasa</div>
+                                <div class="featured-listings__bullet">93,000km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>1,950,000</div>
+                                <div class="image-count">5 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2327760" data-href="https://www.cheki.co.ke/vehicle/qp8x580?featured=true" data-advertiser="7792" data-user="67967" class="slick-slide slick-cloned" data-slick-index="22" aria-hidden="true" tabindex="-1" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qp8x580?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1223951802_inventory1341852080_1624018166.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Toyota Vitz</div>
+                                <div class="featured-listings__location">Mombasa</div>
+                                <div class="featured-listings__bullet">72,561km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>760,000</div>
+                                <div class="image-count">9 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2320580" data-href="https://www.cheki.co.ke/vehicle/qk04wvw?featured=true" data-advertiser="9046" data-user="135703" class="slick-slide slick-cloned" data-slick-index="23" aria-hidden="true" tabindex="-1" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/qk04wvw?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/142694714_inventory319547571_1622199080.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Mitsubishi Pajero</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">141,557km</div>
+                                <div class="featured-listings__bullet">2012</div>
+                                <div class="featured-listings__price"><span>KSh</span>2,350,000</div>
+                                <div class="image-count">10 Photos</div>
+                            </div>
+                        </li>
+                        <li data-id="2323029" data-href="https://www.cheki.co.ke/vehicle/nissan-sylphy-q6m7xz?featured=true" data-user="188471" class="slick-slide slick-cloned" data-slick-index="24" aria-hidden="true" tabindex="-1" style="width: 189px;">
+                            <div class="first">
+                                <a href="https://www.cheki.co.ke/vehicle/nissan-sylphy-q6m7xz?featured=true" tabindex="-1"></a><img class="" src="https://vimg.cheki.co.ke/m/1062661319_inventory659663571_1622907620.jpg" style="opacity: 1;"></div>
+                            <div class="second" style="position:relative">
+                                <div class="featured-listings__title">Nissan Sylphy</div>
+                                <div class="featured-listings__location">Nairobi</div>
+                                <div class="featured-listings__bullet">125,335km</div>
+                                <div class="featured-listings__bullet">2014</div>
+                                <div class="featured-listings__price"><span>KSh</span>998,000</div>
+                                <div class="image-count">15 Photos</div>
+                            </div>
+                        </li>
+                    </div>
+                </div><button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button></ul>
+        </section>
+    </div> -->
+
+
+        <!--     
+    <div class="form-wrapper search-tabs">
+        <div class="featureRibbon-wrapper desktop-tablet-featureRibbon-wrapper">
+            <div class="featureRibbon">
+                <div class="search-ribbon">
+                    <h1 class="featureRibbon__heading">Vehicles for Sale in Kenya</h1>
+                    <ul class="tabs" data-tab="" role="tablist">
+                        <li class="tab-title active tabs__item" role="presentation">
+                            <a href="#used-vehicles" class="tabs__link " role="tab" tabindex="0" aria-selected="true" aria-controls="used-vehicles">
+        USED
+        </a>
+                        </li>
+                        <input type="hidden" name="new_cars" value="1">
+                        <li class="tab-title tabs__item" role="presentation">
+                            <a href="#new-vehicles" class="tabs__link" role="tab" tabindex="0" aria-selected="true" aria-controls="new-vehicles" dusk="new-vehicles-tab">
+        NEW
+        </a>
+                        </li>
+                        <li class="tab-title tabs__item" role="presentation">
+                            <a href="#import-vehicles" class="tabs__link" role="tab" tabindex="0" aria-selected="true" aria-controls="import-vehicles">
+        IMPORT
+        </a>
+                        </li>
+                    </ul>
+                    <div class="tabs-content">
+                        <section role="tabpanel" aria-hidden="false" class="content active" id="used-vehicles">
+                            <form method="GET" action="https://www.cheki.co.ke/vehicles" accept-charset="UTF-8" novalidate="">
+                                <section>
+                                    <div>
+                                        <select class="js-ajaxDrill" data-url="https://www.cheki.co.ke/models-sef" data-target="#models" data-parsley-errors-messages-disabled="" name="makes"><option selected="selected" value="">Make</option><optgroup label="Popular"><option value="toyota">Toyota</option><option value="nissan">Nissan</option><option value="subaru">Subaru</option><option value="honda">Honda</option><option value="mitsubishi">Mitsubishi</option><option value="mercedes-benz">Mercedes Benz</option><option value="mazda">Mazda</option><option value="volkswagen">Volkswagen</option><option value="bmw">BMW</option><option value="land-rover">Land Rover</option><option value="isuzu">Isuzu</option><option value="audi">Audi</option><option value="suzuki">Suzuki</option><option value="lexus">Lexus</option><option value="ford">Ford</option></optgroup><optgroup label="Alphabetical"><option value="acmat">Acmat</option><option value="acura">Acura</option><option value="alfa-romeo">Alfa Romeo</option><option value="audi">Audi</option><option value="aveling-barford">Aveling Barford</option><option value="bentley">Bentley</option><option value="bmw">BMW</option><option value="bomag">Bomag</option><option value="captain">Captain</option><option value="caterpillar">Caterpillar</option><option value="chevrolet">Chevrolet</option><option value="claas">Claas</option><option value="daihatsu">Daihatsu</option><option value="equipment-machinery">Equipment &amp; Machinery</option><option value="faw">FAW</option><option value="ford">Ford</option><option value="fuso">FUSO</option><option value="hino">Hino</option><option value="honda">Honda</option><option value="hyundai">Hyundai</option><option value="isuzu">Isuzu</option><option value="jaguar">Jaguar</option><option value="jeep">Jeep</option><option value="kia">Kia</option><option value="land-rover">Land Rover</option><option value="lexus">Lexus</option><option value="leyland">Leyland</option><option value="mahindra">Mahindra</option><option value="man">Man</option><option value="massey-ferguson">Massey-Ferguson</option><option value="mazda">Mazda</option><option value="mercedes-benz">Mercedes-Benz</option><option value="mini">Mini</option><option value="mitsubishi">Mitsubishi</option><option value="nissan">Nissan</option><option value="peugeot">Peugeot</option><option value="porsche">Porsche</option><option value="proton">Proton</option><option value="renault">Renault</option><option value="scania">Scania</option><option value="subaru">Subaru</option><option value="suzuki">Suzuki</option><option value="tata">Tata</option><option value="toyota">Toyota</option><option value="trailer">Trailer</option><option value="vauxhall">Vauxhall</option><option value="volkswagen">Volkswagen</option><option value="volvo">Volvo</option></optgroup></select>
+                                    </div>
+                                    <div>
+                                        <select id="models" data-parsley-errors-messages-disabled="" name="models"><option selected="selected" value="">Model</option></select>
+                                    </div>
+                                    <div class="doubleField">
+                                        <div class="first">
+                                            <select data-parsley-errors-messages-disabled="" name="year-from"><option selected="selected" value="">Year: From</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option></select>
+                                        </div>
+                                        <div class="last">
+                                            <select data-parsley-errors-messages-disabled="" name="year-to"><option selected="selected" value="">Year: To</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="doubleField">
+                                        <div class="first">
+                                            <select data-parsley-errors-messages-disabled="" name="price-from"><option selected="selected" value="">Price: Min</option><option value="100000">KSh100,000</option><option value="500000">KSh500,000</option><option value="700000">KSh700,000</option><option value="1000000">KSh1,000,000</option><option value="1500000">KSh1,500,000</option><option value="2000000">KSh2,000,000</option><option value="2500000">KSh2,500,000</option><option value="3000000">KSh3,000,000</option><option value="3500000">KSh3,500,000</option><option value="4000000">KSh4,000,000</option><option value="4500000">KSh4,500,000</option><option value="5000000">KSh5,000,000</option><option value="10000000">KSh10,000,000</option></select>
+                                        </div>
+                                        <div class="last">
+                                            <select data-parsley-errors-messages-disabled="" name="price-to"><option selected="selected" value="">Price: Max</option><option value="100000">KSh100,000</option><option value="500000">KSh500,000</option><option value="700000">KSh700,000</option><option value="1000000">KSh1,000,000</option><option value="1500000">KSh1,500,000</option><option value="2000000">KSh2,000,000</option><option value="2500000">KSh2,500,000</option><option value="3000000">KSh3,000,000</option><option value="3500000">KSh3,500,000</option><option value="4000000">KSh4,000,000</option><option value="4500000">KSh4,500,000</option><option value="5000000">KSh5,000,000</option><option value="10000000">KSh10,000,000</option></select>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="actionRow customTop">
+                                    <input class="featureRibbon__button" data-parsley-error-message="Client " type="submit" value="Search Now">
+                                </section>
+                            </form>
+                        </section>
+                        <section role="tabpanel" aria-hidden="true" class="content" id="new-vehicles">
+                            <form method="GET" action="https://www.cheki.co.ke/new-cars" accept-charset="UTF-8" novalidate="">
+                                <section>
+                                    <div>
+                                        <select class="js-ajaxDrill" data-url="https://www.cheki.co.ke/models/newcars" data-target="#model" dusk="newcars-makes-select" data-parsley-errors-messages-disabled="" name="makes"><option selected="selected" value="">Make</option><option value="audi">Audi</option><option value="dongfeng">Dongfeng</option><option value="ford">Ford</option><option value="honda">Honda</option><option value="man">Man</option><option value="mazda">Mazda</option><option value="mercedes-benz">Mercedes-Benz</option><option value="mitsubishi">Mitsubishi</option><option value="nissan">Nissan</option><option value="porsche">Porsche</option><option value="skoda">Skoda</option><option value="subaru">Subaru</option><option value="suzuki">Suzuki</option><option value="sym">Sym</option><option value="tata">Tata</option><option value="toyota">Toyota</option><option value="volkswagen">Volkswagen</option><option value="yamaha">Yamaha</option><option value="zontes">Zontes</option></select>
+                                    </div>
+                                    <div>
+                                        <select id="model" dusk="newcars-models-select" data-parsley-errors-messages-disabled="" name="models"><option selected="selected" value="">Model</option></select>
+                                    </div>
+                                </section>
+                                <section class="actionRow customTop">
+                                    <input class="featureRibbon__button" dusk="newcars-search-button" data-parsley-error-message="Client " type="submit" value="Search Now">
+                                </section>
+                            </form>
+                        </section>
+                        <section role="tabpanel" aria-hidden="true" class="content" id="import-vehicles">
+                            <form method="GET" action="https://www.cheki.co.ke/import-cars/vehicles" accept-charset="UTF-8" novalidate="">
+                                <section>
+                                    <div>
+                                        <select class="js-ajaxDrill" data-url="https://www.cheki.co.ke/models-sef" data-target="#models-import" data-parsley-errors-messages-disabled="" name="makes"><option selected="selected" value="">Make</option><optgroup label="Popular"><option value="toyota">Toyota</option><option value="nissan">Nissan</option><option value="subaru">Subaru</option><option value="honda">Honda</option><option value="mitsubishi">Mitsubishi</option><option value="mercedes-benz">Mercedes Benz</option><option value="mazda">Mazda</option><option value="volkswagen">Volkswagen</option><option value="bmw">BMW</option><option value="land-rover">Land Rover</option><option value="isuzu">Isuzu</option><option value="audi">Audi</option><option value="suzuki">Suzuki</option><option value="lexus">Lexus</option><option value="ford">Ford</option></optgroup><optgroup label="Alphabetical"><option value="acmat">Acmat</option><option value="acura">Acura</option><option value="alfa-romeo">Alfa Romeo</option><option value="audi">Audi</option><option value="aveling-barford">Aveling Barford</option><option value="bentley">Bentley</option><option value="bmw">BMW</option><option value="bomag">Bomag</option><option value="captain">Captain</option><option value="caterpillar">Caterpillar</option><option value="chevrolet">Chevrolet</option><option value="claas">Claas</option><option value="daihatsu">Daihatsu</option><option value="equipment-machinery">Equipment &amp; Machinery</option><option value="faw">FAW</option><option value="ford">Ford</option><option value="fuso">FUSO</option><option value="hino">Hino</option><option value="honda">Honda</option><option value="hyundai">Hyundai</option><option value="isuzu">Isuzu</option><option value="jaguar">Jaguar</option><option value="jeep">Jeep</option><option value="kia">Kia</option><option value="land-rover">Land Rover</option><option value="lexus">Lexus</option><option value="leyland">Leyland</option><option value="mahindra">Mahindra</option><option value="man">Man</option><option value="massey-ferguson">Massey-Ferguson</option><option value="mazda">Mazda</option><option value="mercedes-benz">Mercedes-Benz</option><option value="mini">Mini</option><option value="mitsubishi">Mitsubishi</option><option value="nissan">Nissan</option><option value="peugeot">Peugeot</option><option value="porsche">Porsche</option><option value="proton">Proton</option><option value="renault">Renault</option><option value="scania">Scania</option><option value="subaru">Subaru</option><option value="suzuki">Suzuki</option><option value="tata">Tata</option><option value="toyota">Toyota</option><option value="trailer">Trailer</option><option value="vauxhall">Vauxhall</option><option value="volkswagen">Volkswagen</option><option value="volvo">Volvo</option></optgroup></select>
+                                    </div>
+                                    <div>
+                                        <select id="models-import" data-parsley-errors-messages-disabled="" name="models"><option selected="selected" value="">Model</option></select>
+                                    </div>
+                                    <div class="doubleField">
+                                        <div class="first">
+                                            <select data-parsley-errors-messages-disabled="" name="year-from"><option selected="selected" value="">Year: From</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option></select>
+                                        </div>
+                                        <div class="last">
+                                            <select data-parsley-errors-messages-disabled="" name="year-to"><option selected="selected" value="">Year: To</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="doubleField">
+                                        <div class="first">
+                                            <select data-parsley-errors-messages-disabled="" name="price-from"><option selected="selected" value="">Price: Min</option><option value="100000">KSh100,000</option><option value="500000">KSh500,000</option><option value="700000">KSh700,000</option><option value="1000000">KSh1,000,000</option><option value="1500000">KSh1,500,000</option><option value="2000000">KSh2,000,000</option><option value="2500000">KSh2,500,000</option><option value="3000000">KSh3,000,000</option><option value="3500000">KSh3,500,000</option><option value="4000000">KSh4,000,000</option><option value="4500000">KSh4,500,000</option><option value="5000000">KSh5,000,000</option><option value="10000000">KSh10,000,000</option></select>
+                                        </div>
+                                        <div class="last">
+                                            <select data-parsley-errors-messages-disabled="" name="price-to"><option selected="selected" value="">Price: Max</option><option value="100000">KSh100,000</option><option value="500000">KSh500,000</option><option value="700000">KSh700,000</option><option value="1000000">KSh1,000,000</option><option value="1500000">KSh1,500,000</option><option value="2000000">KSh2,000,000</option><option value="2500000">KSh2,500,000</option><option value="3000000">KSh3,000,000</option><option value="3500000">KSh3,500,000</option><option value="4000000">KSh4,000,000</option><option value="4500000">KSh4,500,000</option><option value="5000000">KSh5,000,000</option><option value="10000000">KSh10,000,000</option></select>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="actionRow customTop">
+                                    <input class="featureRibbon__button" data-parsley-error-message="Client " type="submit" value="Search Now">
+                                </section>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+        <!-- 
+    <div class="viehicle-overal">
+        <h3>Viehicle Types</h3>
+        <div class="viehicle-types">
+            <a href="#"><img class="viehicle--types" src="./svg/cars.svg" alt="All Cars"><span>All Cars</span></a>
+            <a href=""><img class="viehicle--types" src="./svg/saloons.svg" alt="saloons"></a>
+            <a href=""><img class="viehicle--types" src="./svg/buses-vans.svg" alt="buses"></a>
+            <a href=""><img class="viehicle--types" src="./svg/hatchbacks.svg" alt="hatchbacks"></a>
+            <a href=""><img class="viehicle--types" src="./svg/station-wagons.svg" alt="station-wagons"></a>
+            <a href=""><img class="viehicle--types" src="./svg/trucks.svg" alt="truck"></a>
+            <a href=""><img class="viehicle--types" src="./svg/suv-4x4.svg" alt="suv-4x4"></a>
+            <a href=""><img class="viehicle--types" src="./svg/motorbikes.svg" alt=""></a>
+        </div>
+
+    </div> -->
+
+
+
+        <div class="vehicleTypes">
+            <h3>Vehicle Types</h3>
+            <ul class="vehicleIcons">
+                <li>
+                    <a href="#" class="vehicle-images">
+                        <img src="./svg/cars.svg" alt="All Cars" width="100" height="90"><br> All Cars
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="vehicle-images">
+                        <img src="./svg/saloons.svg" alt="Saloons" width="100" height="90"><br> Saloons
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="vehicle-images">
+                        <img src="./svg/hatchbacks.svg" alt="Hatchbacks" width="100" height="90"><br> Hatchbacks
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="vehicle-images">
+                        <img src="./svg/station-wagons.svg" alt="Station Wagons" width="100" height="90"><br> Station Wagons
+                    </a>
+                </li>
+                <div>
+
+                    <li>
+                        <a href="#">
+                            <img src="./svg/suv-4x4.svg" alt="4x4 SUVs" width="100" height="90"><br> 4x4 SUVs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="vehicle-images">
+                            <img src="./svg/motorbikes.svg" alt="Motorbikes" width="100" height="90"><br> Motorbikes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="vehicle-images">
+                            <img src="./svg/trucks.svg" alt="Trucks &amp; Trailers" width="100" height="90"><br> Trucks &amp; Trailers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="vehicle-images">
+                            <img src="./svg/buses-vans.svg" alt="Vans &amp; Buses" width="100" height="90"><br> Vans &amp; Buses
+                        </a>
+                    </li>
+            </ul>
+            </div>
+
+
+
+            <div class="viehicle-brands">
+                <h3>Popular Brands</h3>
+                <a href="#"><img class="viehicle--brands" src="./svg/toyota.svg" alt="Toyota"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/nissan.svg" alt="Nissan"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/sub.png" alt="subaru"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/volkswagen.svg" alt="Volkswagen"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/mitsubishi.svg" alt="mitsubishi"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/mercedes.svg" alt="mercedes"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/mazda.svg" alt="mazda"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/land-rover.svg" alt="land-rover"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/isuzu.svg" alt="isuzu"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/honda.svg" alt="Honda"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/bmw.svg" alt="BMW"></a>
+                <a href=""><img class="viehicle--brands" src="./svg/audi.svg" alt="Audi"></a>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div class="lh3">
+                <h3>Location</h3>
+            </div>
+            <div class="Location">
+
+                <a class="location" style="word-spacing: 32rem;" href="#"><i class="fas fa-map-marker-alt"></i>Nairobi <span>4255</span></a>
+                <hr style="width:35%;text-align:left;margin-left:0">
+                <a class="location" style="word-spacing: 31rem;" href="#"><i class="fas fa-map-marker-alt"></i>Mombasa <span>543</span></a>
+                <hr style="width:35%;text-align:left;margin-left:0">
+                <a class="location" style="word-spacing: 34rem;" href="#"><i class="fas fa-map-marker-alt"></i>Kisumu <span>69</span></a>
+                <hr style="width:35%;text-align:left;margin-left:0">
+                <a class="location" style="word-spacing: 33rem;" href="#"><i class="fas fa-map-marker-alt"></i>Nakuru <span>102</span></a>
+                <hr style="width:35%;text-align:left;margin-left:0">
+
+                <a class="location" style="word-spacing: 35rem;" href="#"><i class="fas fa-map-marker-alt"></i>Eldoret <span>9</span></a>
+                <hr style="width:35%;text-align:left;margin-left:0">
+
+                <a class="location" style="word-spacing: 35rem;" href="#"><i class="fas fa-map-marker-alt"></i>Imports <span>4</span></a>
+
+                <hr style="width:35%;text-align:left;margin-left:0">
+                <a class="location" style="word-spacing: normal;" href="#"><i class="fas fa-map-marker-alt"></i>Rest Of Kenya <span></span></a>
+                <hr style="width:35%;text-align:left;margin-left:0">
+            </div>
+            <div style="padding-left: 20%;width: 100%;max-width: 100%;height: auto;">
+                <img src="./img/digitech-cars.gif" alt="">
+            </div>
+
+            <div class="bottom-nav">
+                <table class="btm-tbl">
+                    <tr>
+                        <td>
+                            <img src="./img/btm-img.png " alt=" " class="btm-image">
+                        </td>
+                        <td>
+                            <div class="btm-div">
+                                <h2 class="wkly-at-news">Weekly Auto News</h2>
+                                <ul>
+                                    <li>Get The Latest News And Auto Reviews</li>
+                                    <li>Auto Buying Tips & Guides</li>
+                                    <li>Most Popular Top 5’S And More</li>
+                                </ul>
+                                <div>
+                                    <form class="form-btm" action="#">
+                                        <input style="padding-right: 15rem;padding-top: 10px;padding-bottom: 10px;color: rgb(25, 163, 231);" type="email" placeholder="Your Email">
+                                        <button type="submit">SIGN UP</button>
+
+                                    </form>
+                                </div>
+
+                                </p>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="bottom-nav-2 ">
+                <table>
+                    <tr>
+                        <td>
+                            <ul class="bottom-ul">
+                                <li>
+                                    <a class="bottom-ul-li" href="#"> <span>About Us</span></a>
+                                </li>
+                                <br>
+                                <li><a class="bottom-ul-li" href="#"><span>Contact Us</span></a></li>
+                                <br>
+                                <li><a class="bottom-ul-li" href="#"><span>Safe Buying & Selling</span></a></li>
+                                <br>
+                                <li><a class="bottom-ul-li" href="#"><span>Blog</span></a></li>
+                            </ul>
+                        </td>
+
+                        <td>
+                            <ul class="bottom-ul">
+                                <li><a class="middle-lower" href="#"><span>Privacy Statement</span></a></li>
+                                <br>
+                                <li><a class="middle-lower" href="#"><span>Terms & Conditions</span></a></li>
+                                <br>
+                                <li><a class="middle-lower" href="#"><span>Unsubscibe from SMS Alerts</span></a></li>
+                                <br>
+                                <li><a class="middle-lower" href="#"><span>Unsubscibe From Email Alarts</span></a></li>
+                                <br>
+                                <li><a class="middle-lower" href="#"><span>SiteMap</span></a></li>
+                            </ul>
+                        </td>
+
+                        <td>
+                            <ul class="bottom-ul">
+                                <h3 class="middle-lower">DigiTech Partners</h3>
+                                <h4 class="middle-lower">Jobs</h4>
+                                <li>
+                                    <a class="middle-lower-i" href="#"><span>BrightMonday Kenya</span></a>
+                                </li>
+                                <h4 class="middle-lower">Properties</h4>
+                                <li>
+                                    <a class="middle-lower-i" href="#"><span>Felix's TechGeeks</span></a>
+                                </li>
+                                <h4 class="middle-lower">ClassFields</h4>
+                                <li>
+                                    <a class="middle-lower-i" href="#"><span>Mount Kenya University</span></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="contact-icon">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a style="color: orange;" href="#"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a style="color: green;" href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+
+                <a class="buttonadmin" href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sytem Admin LogIn</a>
+
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" action="action_page.php" method="post">
+                        <div class="imgcontainer">
+                            <p onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;
+                            </p>
+                            <marquee style="color: rgb(233, 19, 169);font-size: 2.5rem;" width="80%" direction="right">SYSTEM ADMINSTRATOR</marquee><br>
+
+
+                            <img src="./img/img_avatar2.png" Avatar " class="avatar ">
+                            </div>
+
+                            <div class="container-admin ">
+                                <strong  style="color: black; ">Username</strong>
+                                <input class="input " type="text " placeholder="Enter Username " name="username " required><br><br>
+                                <strong style="color: black; ">Password</strong>
+                                <input class="inputpass " type="Password " placeholder="Enter Password " name=" " required><br><br>
+                                <button type="submit ">Login</button>
+                                <br>
+                                <br>
+                                <input type="checkbox " checked="checked " name="remember "> Remember me
+                            </div>
+
+                            <div class="containeradmin " style="background-color:#f1f1f1 ">
+                                <button type="button " onclick="document.getElementById( 'id01').style.display='none' " class="cancelbtn ">Cancel</button>
+                                <span class="psw "> <a href="# ">Forgot password?</a></span>
+                            </div>
+                        </form>
+                 </div>
+
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('id01');
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none ";
+                            }
+                        }
+                    </script>
+
+
+                </div>
+            </div>
+
+
+            <div class="nav_down-bottom ">
+                <div>
+                    &copy; <strong>DigiTech Cars</strong>, site designed & developed by <strong>Felix Wanjala Kawo BIT/2019/87777</strong>
+                </div>
+            </div>
+
+
+
+
+            <script src="./src/main.js "></script>
+</body>
+
+</html>

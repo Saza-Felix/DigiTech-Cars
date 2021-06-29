@@ -1,0 +1,480 @@
+    body {
+        --color-primary: #13143a;
+        --color-primary-dark: #000822;
+        --color-secondary: #252c6a;
+        --color-error: #cc3333;
+        --color-success: #4bb544;
+        --border-radius: 4px;
+        margin: 0;
+        height: 100vh;
+        font-size: 18px;
+        background-size: cover;
+    }
+    
+    .top-nav {
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        background-color: #0860a8 !important;
+        border-bottom: 2px solid #f0f0f0;
+        text-align: right;
+        height: auto;
+    }
+    
+    .top-nav div {
+        color: #fff;
+        background-color: #0860a8 !important;
+        font-family: calibri;
+        padding: 3px;
+        padding-left: 6px;
+        text-align: right;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.2em;
+    }
+    
+    .top-nav div a {
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+    }
+    
+    .top-nav:hover {
+        background-color: #FFEFB2;
+        border-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .top-nav div a:hover {
+        color: red;
+        border-bottom: 2px solid gray;
+        font-size: 1.8rem;
+        font-weight: 100px;
+    }
+    
+    .top-nav,
+    .form__input,
+    .form__button {
+        font: 500 1rem 'Quicksand', sans-serif;
+    }
+    
+    .top-nav-logo {
+        position: fixed;
+        overflow: hidden;
+        top: 37px;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius);
+        width: 100%;
+        background-color: rgb(233, 224, 224) !important;
+        border-bottom: 2px solid #f0f0f0;
+        text-align: right;
+    }
+    
+    .top-nav-logo div {
+        color: grey;
+        background-color: white !important;
+        font-family: calibri;
+        padding: 3px;
+        padding-left: 6px;
+        text-align: right;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+    }
+    
+    .top-nav-logo div a {
+        padding: 10px;
+        text-decoration: none;
+        color: grey;
+        font-size: 1.25em;
+    }
+    
+    .top-nav-logo div a button {
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 1.25em;
+        background-color: #307b2a;
+        border-radius: 25px;
+    }
+    
+    .top-nav-logo div a:hover {
+        color: red;
+        font-size: 2rem;
+    }
+    
+    .top-nav-logo div a button:hover {
+        color: white;
+        background-color: #379d30;
+    }
+    
+    .badge {
+        background-color: #e04d36;
+        color: #fff;
+        padding: 5px 8px;
+        padding-top: 5px;
+        padding-right: 8px;
+        padding-bottom: 5px;
+        padding-left: 8px;
+        font-size: 10px;
+        position: absolute;
+        display: block;
+        z-index: 100;
+        height: 17px;
+        line-height: 8px;
+        top: 4px;
+        border-radius: 3px;
+        margin-left: -5px;
+    }
+    
+    .middle-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding-top: 127px;
+    }
+    
+    .top-left1 {
+        position: absolute;
+        max-height: 100%;
+        padding-left: 5px;
+        max-width: 100%;
+        top: 10%;
+        left: 0.65%;
+        text-shadow: transparent;
+        font-size: 40PX;
+        font-family: time new roman;
+        color: orange;
+    }
+    
+    .top-left2 {
+        position: absolute;
+        max-height: 20%;
+        max-width: 80%;
+        top: 17%;
+        left: 5%;
+        text-shadow: transparent;
+        font-size: 40PX;
+        font-family: times new roman;
+        color: white;
+    }
+    
+    .logo-image {
+        width: 50px;
+        height: 60px;
+    }
+    
+    .logo-name {
+        padding: 0 auto;
+        padding-left: 1px;
+    }
+    
+    .felix1 div ul li a i:hover {
+        background-color: red;
+    }
+    
+    .felix2 {
+        background-color: red;
+        border-radius: 25px;
+        padding: 10px 20px 10px 20px;
+        color: white;
+    }
+    
+    h3 {
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        color: black;
+    }
+    
+    .viehicle-overal {
+        background-color: whitesmoke;
+        padding-top: 0px;
+    }
+    
+    .viehicle-types {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .viehicle--types {
+        width: 20%;
+        max-width: 100%;
+        padding-left: 10%;
+        padding-top: 20px;
+    }
+    
+    .viehicle-brands {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    
+    .viehicle--brands {
+        width: 15%;
+        max-width: 95%;
+        padding-left: 8%;
+        padding-top: 1rem;
+    }
+    
+    .viehicle--brands:hover {
+        width: 17%;
+        max-width: 100%;
+    }
+    
+    .Location {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding-left: 30%;
+        padding-top: 20px;
+        font-size: 2rem;
+        padding-bottom: 25px;
+    }
+    
+    .hl3 {
+        padding-top: 30px;
+    }
+    
+    .location {
+        color: black;
+        padding-top: 10px;
+    }
+    
+    .location i {
+        margin-right: 2em;
+    }
+    
+    .bottom-nav {
+        background-color: #2a81a5;
+        width: 100%;
+        max-width: 100%;
+        color: white;
+        font-size: 2rem;
+        padding-left: 15%;
+        font-weight: 700;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .bottom-nav table div form button {
+        background-color: #cc3333;
+        padding: 5px;
+    }
+    
+    .bottom-nav table div form button:hover {
+        background-color: #e04d36;
+        font-size: 2.5rem;
+    }
+    
+    .btm-image {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        padding-left: 10rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .btm-tbl {
+        padding-left: 5rem;
+    }
+    
+    .wkly-at-news {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+        padding-left: 5rem;
+        padding-top: 0px;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    .bottom-nav table div form {
+        padding-left: 5rem;
+    }
+    
+    .bottom-nav-2 {
+        background-color: #459dc2;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+        padding-top: 50px;
+        padding-left: 25%;
+        font-size: 1.8rem;
+        color: white;
+    }
+    
+    .bottom-td-1 {
+        padding-left: 25px;
+        color: white;
+    }
+    
+    .form-btm {
+        color: default;
+    }
+    
+    .form-btm input:hover {
+        background-color: rgb(225, 223, 223);
+        color: ;
+    }
+    
+    ul.bottom-ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+.bottom-ul li:hover {
+    background-color: rgb(191, 187, 187);
+    opacity: .4;
+}
+span {
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(111, 109, 109);
+    width: 500px;
+    max-width: 100%;
+}
+.middle-lower {
+    padding-left: 200px;
+    color: white;
+}
+.middle-lower-i {
+    padding-left: 250px;
+    color: white;
+}
+.nav_down-bottom {
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 2px solid #f0f0f0;
+}
+.nav_down-bottom div {
+    width: 100%;
+    max-width: 100%;
+    color: #fff;
+    background-color: #000;
+    font-family: calibri;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.contact-icon {
+    padding-top: 5rem;
+}
+.contact-icon a {
+    padding-left: 10px;
+    font-size: 1.5em;
+}
+.contact-icon a i {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+}
+.system-admin {
+    color: white;
+    font-size: 3rem;
+    padding-left: 80%;
+    padding-top: 20px;
+}
+.system-admin:hover {
+    color: red;
+}
+.vehicleTypes {
+    background-color: #f2f2f2;
+    max-width: 60%;
+    width: 100%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none;
+    /* position: relative; */
+}
+.vehicleTypes ul {
+    margin: 0 auto 60px;
+    padding: 0 60px;
+    display: block;
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* ul.vehicleIcons a {
+    color: #444;
+    padding: 0;
+} */
+a {
+    text-decoration: none;
+    line-height: normal;
+    outline: none;
+}
+.vehicleTypes ul li {
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    max-height: 50%;
+    display: inline-block;
+    float: left;
+    padding-top: 45px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+,
+.vehicleTypes ul li:hover {
+    color: red;
+}
+
+/* dl,
+ol,
+ul {
+    font-size: 2rem;
+    line-height: 0;
+    list-style-position: outside;
+    padding-left: 15px;
+    text-decoration: none;
+} */
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    text-decoration: none;
+}
+.vehicleTypes ul li a:hover {
+    color: red;
+    font-size: 1.578rem;
+    text-decoration: none;
+    /* }
+.vehicleTypes ul li a span {
+    color: #444;
+    text-decoration: none;
+} */
+    
+    .vehicleTypes ul li a :hover {
+        color: red;
+    }
+    
+    .vehicleTypes ul li a img:hover {
+        color: red;
+        font-size: large;
+    }
+    
+    .admin-login-pg {
+        padding-top: 0p;
+        background-color: green;
+    }
